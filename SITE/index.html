@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <link rel="stylesheet" href="style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معماری هوشمند</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    }
+    window.onload = () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') document.documentElement.classList.add('dark');
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Vazirmatn', 'IRANSans', Tahoma, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors">
+  <header class="flex justify-between items-center p-4 border-b dark:border-gray-700 bg-white dark:bg-gray-900 sticky top-0 z-50">
+    <h1 class="text-xl font-bold">معماری هوشمند</h1>
+    <button onclick="toggleTheme()" class="text-sm px-4 py-1 border rounded dark:border-gray-400">
+      تغییر حالت
+    </button>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
+    <section>
+      <h2 class="text-3xl font-bold mb-4">معرفی پروژه</h2>
+      <p class="text-lg leading-loose">
+        معماری هوشمند سیستمی نوآورانه برای تولید نقشه‌های مسکونی به‌صورت خودکار و استاندارد است. این سیستم قادر است برای انواع ابعاد زمین، نقشه‌ای معقول، واقعی و قابل ساخت ارائه دهد.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold mb-6">ویژگی‌ها</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">سازگار با همه ابعاد</h3>
+          <p>تولید نقشه منطقی در هر اندازه زمین — حتی فضاهای باریک یا محدود.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">تفکیک فضایی استاندارد</h3>
+          <p>طراحی پذیرایی، آشپزخانه، اتاق‌ها، راهرو و سرویس مطابق معماری واقعی.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">تغییر تم گرافیکی</h3>
+          <p>پشتیبانی از حالت تیره و روشن برای راحتی مطالعه و نمایش.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">پلان‌های متنوع</h3>
+          <p>ارائه طرح‌های مختلف با ساختارهای متنوع برای سلایق مختلف.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold mb-6">نمونه نقشه‌ها</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
+          <img src="plan1-sample.png" alt="Plan 1" class="rounded mb-2 w-full">
+          <p class="text-center">پلان شماره ۱</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
+          <img src="plan3-sample.png" alt="Plan 3" class="rounded mb-2 w-full">
+          <p class="text-center">پلان شماره ۳</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm py-6 border-t dark:border-gray-700">
+    © ۲۰۲۵ معماری هوشمند — توسعه داده‌شده با ❤️ برای معماران و سازندگان
+  </footer>
+</body>
+</html>
